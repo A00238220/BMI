@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sharon Bandele (BMI)</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <center>
+      <h1>Calculate your BMI</h1>
+      </center>
+    <h2>
+      <center>
+      <p>Enter your weight and height to see BMI</p>
+
+      <form action="/form" method="POST">
+      <label for="weight">Weight (in kg)</label>
+      <input type="number" id="weight" name="weight">
+      <label for="height">Height (in cm)</label>
+      <input type="number" id="height" name="height">
+      <input type="submit" value="Submit">
+      </form>
+      <br> 
+      <center> 
+        {%if result%}
+	<p>
+  {%print("Your body mass index is {}.".format(result))%}
+  </p>
+	{%endif%}
+
+      <!--<p>Your body mass index is {{result}}</p>-->
+      <p>{{text}}</p>
+
+      <a href="index.html"><button>Refresh</button></a>
+      </center>
+
+      </form>
+      </center>
+      </h2>
+
+    <script src="script.js"></script>
+  </body>
+</html>
